@@ -9,6 +9,6 @@ namespace To_Do_List_Library.Core.Entities
         public Guid ToDoListId { get; set; }
         public string Name { get; set; }
         public List<ToDoItem> ToDoItems { get; set; }
-        public User User { get; set; }
+        public Guid UserId { get; set; }
     }
 }
