@@ -7,6 +7,6 @@ namespace To_Do_List_Library.Application.Contracts.Persistence
 {
     public interface IUserRepository : IAsyncRepository<User> 
     {
-        Task<User> LoginUser(User entity);
+        User LoginUser(User entity);
     }
 }
