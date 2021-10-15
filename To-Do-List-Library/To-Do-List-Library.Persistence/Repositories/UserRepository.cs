@@ -16,9 +16,14 @@ namespace To_Do_List_Library.Persistence.Repositories
         {
             _toDoDbContext = toDoDbContext;
         }
-        public Task<User> LoginUser(User entity)
+        public User LoginUser(User entity)
         {
-            throw new NotImplementedException();
+            var user = _toDoDbContext.User.Where(x => x.Email == entity.Email && x.Password == entity.Password).FirstOrDefault();
+            if(user == null)
+            {
+                throw new Exception("Incorrect Credentials");
+            }
+            return user;
         }
     }
 }

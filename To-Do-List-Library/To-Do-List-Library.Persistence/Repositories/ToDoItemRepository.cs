@@ -16,6 +16,5 @@ namespace To_Do_List_Library.Persistence.Repositories
         {
             _toDoDbContext = toDoDbContext;
         }
-
     }
 }

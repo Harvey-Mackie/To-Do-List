@@ -15,4 +15,8 @@
     <ProjectReference Include="..\src\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+  </ItemGroup>
+
 </Project>
