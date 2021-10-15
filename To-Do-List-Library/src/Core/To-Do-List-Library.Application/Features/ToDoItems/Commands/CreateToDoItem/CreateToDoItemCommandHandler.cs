@@ -8,6 +8,8 @@ using AutoMapper;
 using System.Threading;
 using To_Do_List_Library.Application.Contracts.Persistence;
 using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Application.Contracts.Identity;
+using To_Do_List_Library.Application.Contracts.Presentation;
 
 namespace To_Do_List_Library.Application.Features.ToDoItems.Commands.CreateToDoItem
 {
@@ -16,11 +18,19 @@ namespace To_Do_List_Library.Application.Features.ToDoItems.Commands.CreateToDoI
         private readonly IMapper _mapper;
         private readonly IToDoItemRepository _toDoItemRepository;
         private readonly IToDoListRepository _toDoListRepository;
-        public CreateToDoItemCommandHandler(IMapper mapper, IToDoItemRepository toDoItemRepository, IToDoListRepository toDoListRepository)
+        private readonly IAuthenticationService _authenticationService;
+        private readonly ILoggedInUserService _loggedInService;
+        public CreateToDoItemCommandHandler(IMapper mapper, 
+            IToDoItemRepository toDoItemRepository, 
+            IToDoListRepository toDoListRepository, 
+            IAuthenticationService authenticationService,
+            ILoggedInUserService loggedInService)
         {
             _mapper = mapper;
             _toDoItemRepository = toDoItemRepository;
             _toDoListRepository = toDoListRepository;
+            _authenticationService = authenticationService;
+            _loggedInService = loggedInService;
         }
         public async Task<Guid> Handle(CreateToDoItemCommand request, CancellationToken cancellationToken)
         {
@@ -28,7 +38,7 @@ namespace To_Do_List_Library.Application.Features.ToDoItems.Commands.CreateToDoI
             
             if(isUserValid is false)
             {
-                throw new Exception($"List is not associated with user {request.UserId}");
+                throw new Exception($"List is not associated with user");
             }
 
             var toDoListItem = _mapper.Map<ToDoItem>(request);
@@ -40,7 +50,8 @@ namespace To_Do_List_Library.Application.Features.ToDoItems.Commands.CreateToDoI
         private async Task<bool> IsUserValid(CreateToDoItemCommand request)
         {
             var toDoList = await _toDoListRepository.GetByIdAsync(request.ToDoListId);
-            if (toDoList.UserId.Equals(request.UserId) )
+            var userId = _authenticationService.GetUserId(_loggedInService.UserId);
+            if (toDoList.UserId.Equals(userId))
             {
                 return true;
             }

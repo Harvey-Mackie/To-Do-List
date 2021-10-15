@@ -9,6 +9,5 @@ namespace To_Do_List_Library.Application.Features.ToDoLists.Queries.GetAllLists
 {
     public class GetAllListsQuery : IRequest<List<GetAllListsQueryResponse>>
     {
-        public Guid UserId { get; set; }
     }
 }

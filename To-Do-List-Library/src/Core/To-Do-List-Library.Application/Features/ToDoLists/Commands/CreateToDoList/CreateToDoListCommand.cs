@@ -1,10 +1,11 @@
 ﻿using MediatR;
+using System;
 
 namespace To_Do_List_Library.Application.Features.ToDoLists.Commands.CreateToDoList
 {
-    public class DeleteToDoListCommand : IRequest<bool>
+    public class CreateToDoListCommand : IRequest<Guid>
     {
         public string Name { get; set; }
-        public string UserId { get; set; }
+        public string Token { get; set; }
     }
 }

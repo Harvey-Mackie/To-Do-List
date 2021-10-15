@@ -11,6 +11,6 @@ namespace To_Do_List_Library.Application.Features.ToDoLists.Queries.GetAllLists
     {
         public Guid ToDoListId { get; set; }
         public string Name { get; set; }
-        public List<ToDoItem> ToDoItems { get; set; }
+        public virtual ICollection<ToDoItem> ToDoItems { get; set; }
     }
 }

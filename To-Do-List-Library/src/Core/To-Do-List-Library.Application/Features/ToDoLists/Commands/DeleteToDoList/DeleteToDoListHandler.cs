@@ -8,6 +8,8 @@ using AutoMapper;
 using System.Threading;
 using To_Do_List_Library.Application.Contracts.Persistence;
 using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Application.Contracts.Identity;
+using To_Do_List_Library.Application.Contracts.Presentation;
 
 namespace To_Do_List_Library.Application.Features.ToDoLists.Commands.DeleteToDoList
 {
@@ -15,14 +17,23 @@ namespace To_Do_List_Library.Application.Features.ToDoLists.Commands.DeleteToDoL
     {
         private readonly IMapper _mapper;
         private readonly IToDoListRepository _toDoListRepository;
-        public DeleteToDoListHandler(IMapper mapper, IToDoListRepository toDoItemRepository)
+        private readonly IAuthenticationService _authenticationService;
+        private readonly ILoggedInUserService _loggedInUserService;
+        public DeleteToDoListHandler(IMapper mapper, 
+            IToDoListRepository toDoItemRepository,
+            IAuthenticationService authenticationService,
+            ILoggedInUserService loggedInUserService)
         {
             _mapper = mapper;
             _toDoListRepository = toDoItemRepository;
+            _authenticationService = authenticationService;
+            _loggedInUserService = loggedInUserService;
         }
         public async Task<bool> Handle(DeleteToDoListCommand request, CancellationToken cancellationToken)
         {
+            var userId = _authenticationService.GetUserId(_loggedInUserService.UserId);
             var toDoListEntity = _mapper.Map<ToDoList>(request);
+            toDoListEntity.UserId = userId;
             await _toDoListRepository.DeleteAsync(toDoListEntity);
             return true;
         }

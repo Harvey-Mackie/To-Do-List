@@ -9,7 +9,6 @@ namespace To_Do_List_Library.Application.Features.ToDoItems.Commands.CreateToDoI
 {
     public class CreateToDoItemCommand : IRequest<Guid>
     {
-        public Guid UserId { get; set; }
         public Guid ToDoListId { get; set; }
         public string Title { get; set; }
     }

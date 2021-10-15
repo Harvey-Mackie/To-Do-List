@@ -9,6 +9,6 @@ namespace To_Do_List_Library.Application.Features.ToDoLists.Queries.GetList
 {
     public class GetListQuery : IRequest<GetListQueryResponse>
     {
-        public Guid ListId { get; set; }
+        public Guid ToDoListId { get; set; }
     }
 }
