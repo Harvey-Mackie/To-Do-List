@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>To_Do_List_Library.Identity</RootNamespace>
+  </PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.7.1" />
+		<PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.10" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj" />
+    <ProjectReference Include="..\To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>
