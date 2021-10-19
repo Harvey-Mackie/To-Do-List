@@ -1,19 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using To_Do_List_Library.Application.Contracts.Presentation;
+using To_Do_List_Library.Core.Common;
 using To_Do_List_Library.Core.Entities;
 
 namespace To_Do_List_Library.Persistence.Configuration
 {
     public class ToDoDbContext : DbContext
     {
-        public ToDoDbContext(DbContextOptions<ToDoDbContext> options)
+        private readonly ILoggedInUserService _loggedInUserService;
+        public ToDoDbContext(DbContextOptions<ToDoDbContext> options, ILoggedInUserService loggedInUserService)
           : base(options)
         {
+            _loggedInUserService = loggedInUserService;
         }
 
         public DbSet<ToDoList> ToDoList { get; set; }
@@ -59,5 +64,27 @@ namespace To_Do_List_Library.Persistence.Configuration
                 UserId = userGuid
             });
         }
+
+        public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+        {
+            foreach(var entity in ChangeTracker.Entries<AuditableEntry>())
+            {
+                switch (entity.State)
+                {
+                    case EntityState.Added:
+                        entity.Entity.CreatedDate = DateTime.Now;
+                        entity.Entity.CreatedBy = _loggedInUserService.UserId;
+                        break; 
+                    case EntityState.Modified:
+                        entity.Entity.LastModifiedDate = DateTime.Now;
+                        entity.Entity.LastModifiedBy = _loggedInUserService.UserId;
+                        break;
+                }
+            }
+
+            return base.SaveChangesAsync(cancellationToken);
+        }
+
+
     }
 }

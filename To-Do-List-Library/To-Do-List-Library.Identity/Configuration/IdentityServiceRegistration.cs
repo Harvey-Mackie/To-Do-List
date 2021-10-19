@@ -25,6 +25,8 @@ namespace To_Do_List_Library.Identity.Configuration
         {
             services.Configure<JwtSettings>(configuration.GetSection("JwtSettings"));
             services.AddTransient<IAuthenticationService, AuthenticationService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
+
             return services;
         }
     }
