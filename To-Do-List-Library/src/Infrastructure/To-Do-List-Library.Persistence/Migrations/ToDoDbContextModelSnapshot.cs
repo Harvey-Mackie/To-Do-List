@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using To_Do_List_Library.Persistence.Configuration;
+using To_Do_List_Library.Infrastructure.Persistence.Configuration;
 
-namespace To_Do_List_Library.Persistence.Migrations
+namespace To_Do_List_Library.Infrastructure.Persistence.Migrations
 {
     [DbContext(typeof(ToDoDbContext))]
     partial class ToDoDbContextModelSnapshot : ModelSnapshot

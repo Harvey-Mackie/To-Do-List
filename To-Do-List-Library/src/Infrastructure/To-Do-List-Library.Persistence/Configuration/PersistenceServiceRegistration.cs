@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using To_Do_List_Library.Application.Contracts.Persistence;
-using To_Do_List_Library.Persistence.Repositories;
+using To_Do_List_Library.Infrastructure.Persistence.Repositories;
 
-namespace To_Do_List_Library.Persistence.Configuration
+namespace To_Do_List_Library.Infrastructure.Persistence.Configuration
 {
     public static class PersistenceServiceRegistration
     {

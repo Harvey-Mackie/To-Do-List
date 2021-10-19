@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj" />
+    <ProjectReference Include="..\..\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj" />
   </ItemGroup>
 
   <ItemGroup>

@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace To_Do_List_Library.Persistence.Migrations
+namespace To_Do_List_Library.Infrastructure.Persistence.Migrations
 {
     public partial class InitialCreate : Migration
     {

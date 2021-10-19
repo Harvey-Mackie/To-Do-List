@@ -17,7 +17,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{655FA12C-AC4
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "To-Do-List-Library.Application", "src\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj", "{96338B13-6616-4780-A725-EF03CD2CD90C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "To-Do-List-Library.Persistence", "To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj", "{891475BC-2683-4F98-9BDC-8651F0818B7E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "To-Do-List-Library.Persistence", "src\Infrastructure\To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj", "{891475BC-2683-4F98-9BDC-8651F0818B7E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "To-Do-List-Library.API", "src\Presentation\To-Do-List-Library.API\To-Do-List-Library.API.csproj", "{8EA0F308-F770-4B30-BC75-E1D2D7991E0A}"
 EndProject

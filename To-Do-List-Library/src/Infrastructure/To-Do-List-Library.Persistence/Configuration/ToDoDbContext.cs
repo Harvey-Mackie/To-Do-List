@@ -10,7 +10,7 @@ using To_Do_List_Library.Application.Contracts.Presentation;
 using To_Do_List_Library.Core.Common;
 using To_Do_List_Library.Core.Entities;
 
-namespace To_Do_List_Library.Persistence.Configuration
+namespace To_Do_List_Library.Infrastructure.Persistence.Configuration
 {
     public class ToDoDbContext : DbContext
     {
