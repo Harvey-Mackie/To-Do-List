@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using To_Do_List_Library.Application.Contracts.Presentation;
 
-namespace To_Do_List_Library.API.Services
+namespace To_Do_List_Library.Presentation.API.Services
 {
     public class LoggedInUserService : ILoggedInUserService
     {

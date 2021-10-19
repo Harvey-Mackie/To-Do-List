@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using To_Do_List_Library.Application.Features.Users.Commands.CreateUser;
 using To_Do_List_Library.Application.Features.Users.Queries.LoginUser;
 
-namespace To_Do_List_Library.API.Controllers
+namespace To_Do_List_Library.Presentation.API.Controllers
 {
     [Route("User")]
     public class UserController : Controller

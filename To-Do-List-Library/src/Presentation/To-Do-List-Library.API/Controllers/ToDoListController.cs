@@ -9,10 +9,10 @@ using To_Do_List_Library.Application.Features.ToDoLists.Queries.GetList;
 using To_Do_List_Library.Application.Features.ToDoLists.Commands.CreateToDoList;
 using To_Do_List_Library.Application.Features.ToDoLists.Commands.DeleteToDoList;
 using Microsoft.AspNetCore.Authorization;
-using To_Do_List_Library.API.Controllers.Filters;
+using To_Do_List_Library.Presentation.API.Controllers.Filters;
 using Microsoft.Net.Http.Headers;
 
-namespace To_Do_List_Library.API.Controllers
+namespace To_Do_List_Library.Presentation.API.Controllers
 {
     [ServiceFilter(typeof(AuthTokenFilter))]
     [Route("ToDoList")]

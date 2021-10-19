@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using To_Do_List_Library.Application.Contracts.Identity;
 using To_Do_List_Library.Identity.Configuration;
 
-namespace To_Do_List_Library.API.Controllers.Filters
+namespace To_Do_List_Library.Presentation.API.Controllers.Filters
 {
     public class AuthTokenFilter : ActionFilterAttribute 
     {

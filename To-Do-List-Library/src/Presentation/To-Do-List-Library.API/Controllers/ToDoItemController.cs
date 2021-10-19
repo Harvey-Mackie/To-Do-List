@@ -3,13 +3,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Net.Http.Headers;
 using System;
 using System.Threading.Tasks;
-using To_Do_List_Library.API.Controllers.Filters;
+using To_Do_List_Library.Presentation.API.Controllers.Filters;
 using To_Do_List_Library.Application.Features.ToDoItems.Commands.CreateToDoItem;
 using To_Do_List_Library.Application.Features.ToDoItems.Commands.DeleteToDoItem;
 using To_Do_List_Library.Application.Features.ToDoItems.Commands.UpdateToDoItemToComplete;
 using To_Do_List_Library.Application.Features.ToDoItems.Commands.UpdateToDoItemToIncomplete;
 
-namespace To_Do_List_Library.API.Controllers
+namespace To_Do_List_Library.Presentation.API.Controllers
 {
     [ServiceFilter(typeof(AuthTokenFilter))]
     [Route("ToDoItem")]
