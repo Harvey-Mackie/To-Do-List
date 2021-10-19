@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 using MediatR;
 using AutoMapper;
 using To_Do_List_Library.Core.Entities;
-using To_Do_List_Library.Application.Contracts.Persistence;
-using To_Do_List_Library.Application.Contracts.Identity;
-using To_Do_List_Library.Application.Contracts.Presentation;
+using To_Do_List_Library.Core.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Contracts.Identity;
+using To_Do_List_Library.Core.Application.Contracts.Presentation;
 
-namespace To_Do_List_Library.Application.Features.ToDoLists.Commands.CreateToDoList
+namespace To_Do_List_Library.Core.Application.Features.ToDoLists.Commands.CreateToDoList
 {
     public class CreateToDoListCommandHandler : IRequestHandler<CreateToDoListCommand, Guid>
     {

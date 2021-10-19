@@ -13,8 +13,8 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-using To_Do_List_Library.Application.Contracts.Persistence;
-using To_Do_List_Library.Application.Models.Authentication;
+using To_Do_List_Library.Core.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Models.Authentication;
 using To_Do_List_Library.Infrastructure.Persistence.Repositories;
 
 namespace To_Do_List_Library.Infrastructure.Identity.Configuration

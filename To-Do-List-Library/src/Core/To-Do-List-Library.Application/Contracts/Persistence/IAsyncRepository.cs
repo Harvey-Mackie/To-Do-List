@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace To_Do_List_Library.Application.Contracts.Persistence
+namespace To_Do_List_Library.Core.Application.Contracts.Persistence
 {
     public interface IAsyncRepository<T> where T : class
     {

@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace To_Do_List_Library.Application.Features.Users.Queries.LoginUser
+namespace To_Do_List_Library.Core.Application.Features.Users.Queries.LoginUser
 {
     public class LoginUserQuery : IRequest<string>
     {

@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 using MediatR;
 using AutoMapper;
 using System.Threading;
-using To_Do_List_Library.Application.Contracts.Persistence;
-using To_Do_List_Library.Application.Contracts.Identity;
-using To_Do_List_Library.Application.Contracts.Presentation;
+using To_Do_List_Library.Core.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Contracts.Identity;
+using To_Do_List_Library.Core.Application.Contracts.Presentation;
 
-namespace To_Do_List_Library.Application.Features.ToDoLists.Queries.GetList
+namespace To_Do_List_Library.Core.Application.Features.ToDoLists.Queries.GetList
 {
     public class GetListQueryHandler : IRequestHandler<GetListQuery, GetListQueryResponse>
     {

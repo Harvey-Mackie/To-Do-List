@@ -3,10 +3,10 @@ using System.Threading;
 using System.Threading.Tasks;
 using MediatR;
 using AutoMapper;
-using To_Do_List_Library.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Contracts.Persistence;
 using To_Do_List_Library.Core.Entities;
 
-namespace To_Do_List_Library.Application.Features.Users.Commands.CreateUser
+namespace To_Do_List_Library.Core.Application.Features.Users.Commands.CreateUser
 {
     public class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Guid>
     {

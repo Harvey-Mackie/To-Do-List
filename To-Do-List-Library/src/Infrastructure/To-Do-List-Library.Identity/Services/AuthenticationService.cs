@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Threading.Tasks;
-using To_Do_List_Library.Application.Contracts.Identity;
-using To_Do_List_Library.Application.Contracts.Persistence;
-using To_Do_List_Library.Application.Models.Authentication;
+using To_Do_List_Library.Core.Application.Contracts.Identity;
+using To_Do_List_Library.Core.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Models.Authentication;
 using AutoMapper;
 using To_Do_List_Library.Core.Entities;
 using System.IdentityModel.Tokens.Jwt;

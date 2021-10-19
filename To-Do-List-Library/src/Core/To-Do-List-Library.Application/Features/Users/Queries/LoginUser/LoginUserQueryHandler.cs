@@ -2,11 +2,11 @@
 using MediatR;
 using AutoMapper;
 using System.Threading;
-using To_Do_List_Library.Application.Contracts.Persistence;
-using To_Do_List_Library.Application.Contracts.Identity;
-using To_Do_List_Library.Application.Models.Authentication;
+using To_Do_List_Library.Core.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Contracts.Identity;
+using To_Do_List_Library.Core.Application.Models.Authentication;
 
-namespace To_Do_List_Library.Application.Features.Users.Queries.LoginUser
+namespace To_Do_List_Library.Core.Application.Features.Users.Queries.LoginUser
 {
     public class LoginUserQueryHandler : IRequestHandler<LoginUserQuery, string>
     {

@@ -11,14 +11,14 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using To_Do_List_Library.Application.Configuration;
+using To_Do_List_Library.Core.Application.Configuration;
 using To_Do_List_Library.Infrastructure.Persistence.Configuration;
 using To_Do_List_Library.Infrastructure.Identity.Configuration;
-using To_Do_List_Library.Application.Contracts.Identity;
+using To_Do_List_Library.Core.Application.Contracts.Identity;
 using To_Do_List_Library.Infrastructure.Identity.Services;
 using To_Do_List_Library.Presentation.API.Controllers.Filters;
 using To_Do_List_Library.Presentation.API.Services;
-using To_Do_List_Library.Application.Contracts.Presentation;
+using To_Do_List_Library.Core.Application.Contracts.Presentation;
 using Microsoft.AspNetCore.Http;
 using To_Do_List_Library.Presentation.API.Middleware;
 

@@ -8,7 +8,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace To_Do_List_Library.Application.Configuration
+namespace To_Do_List_Library.Core.Application.Configuration
 {
     public static class ApplicationServiceRegistration
     {

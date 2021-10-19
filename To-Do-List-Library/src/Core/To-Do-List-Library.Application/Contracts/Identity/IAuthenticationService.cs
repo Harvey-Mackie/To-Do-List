@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using To_Do_List_Library.Application.Models.Authentication;
+using To_Do_List_Library.Core.Application.Models.Authentication;
 using To_Do_List_Library.Core.Entities;
 
-namespace To_Do_List_Library.Application.Contracts.Identity
+namespace To_Do_List_Library.Core.Application.Contracts.Identity
 {
     public interface IAuthenticationService
     {

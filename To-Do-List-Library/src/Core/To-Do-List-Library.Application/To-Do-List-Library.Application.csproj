@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <RootNamespace>To_Do_List_Library.Application</RootNamespace>
+    <RootNamespace>To_Do_List_Library.Core.Application</RootNamespace>
   </PropertyGroup>
 
 	<ItemGroup>

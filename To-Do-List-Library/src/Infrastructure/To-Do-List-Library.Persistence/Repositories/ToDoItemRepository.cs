@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using To_Do_List_Library.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Contracts.Persistence;
 using To_Do_List_Library.Core.Entities;
 using To_Do_List_Library.Infrastructure.Persistence.Configuration;
 

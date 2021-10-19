@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 
-namespace To_Do_List_Library.Application.Features.ToDoLists.Queries.GetAllLists
+namespace To_Do_List_Library.Core.Application.Features.ToDoLists.Queries.GetAllLists
 {
     public class GetAllListsQuery : IRequest<List<GetAllListsQueryResponse>>
     {

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace To_Do_List_Library.Application.Contracts.Presentation
+namespace To_Do_List_Library.Core.Application.Contracts.Presentation
 {
     public interface ILoggedInUserService
     {
