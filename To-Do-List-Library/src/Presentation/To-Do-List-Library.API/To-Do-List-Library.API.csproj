@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>To_Do_List_Library.Presentation.API</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Core" Version="1.20.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.10">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+	  </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\To-Do-List-Library.Identity\To-Do-List-Library.Identity.csproj" />
+    <ProjectReference Include="..\..\..\To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj" />
+    <ProjectReference Include="..\..\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj" />
+  </ItemGroup>
+
+</Project>
