@@ -11,8 +11,8 @@
 	</ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj" />
-    <ProjectReference Include="..\src\Infrastructure\To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj" />
+    <ProjectReference Include="..\..\Core\To-Do-List-Library.Application\To-Do-List-Library.Application.csproj" />
+    <ProjectReference Include="..\To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj" />
   </ItemGroup>
 
 </Project>

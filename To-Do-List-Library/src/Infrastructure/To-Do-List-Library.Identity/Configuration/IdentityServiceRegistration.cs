@@ -17,7 +17,7 @@ using To_Do_List_Library.Application.Contracts.Persistence;
 using To_Do_List_Library.Application.Models.Authentication;
 using To_Do_List_Library.Infrastructure.Persistence.Repositories;
 
-namespace To_Do_List_Library.Identity.Configuration
+namespace To_Do_List_Library.Infrastructure.Identity.Configuration
 {
     public static class IdentityServiceRegistration
     {

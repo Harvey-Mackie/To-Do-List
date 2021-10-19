@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using To_Do_List_Library.Application.Contracts.Identity;
-using To_Do_List_Library.Identity.Configuration;
+using To_Do_List_Library.Infrastructure.Identity.Configuration;
 
 namespace To_Do_List_Library.Presentation.API.Controllers.Filters
 {

@@ -12,7 +12,7 @@ using System.Text;
 using Microsoft.Extensions.Options;
 using System.Linq;
 
-namespace To_Do_List_Library.Identity.Services
+namespace To_Do_List_Library.Infrastructure.Identity.Services
 {
     public class AuthenticationService : IAuthenticationService
     {
