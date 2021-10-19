@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Core.Domain.Entities;
 
 namespace To_Do_List_Library.Core.Application.Features.ToDoLists.Queries.GetList
 {

@@ -1,5 +1,5 @@
 ﻿using System;
-using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Core.Domain.Entities;
 using System.Threading.Tasks;
 using System.Collections.Generic;
 

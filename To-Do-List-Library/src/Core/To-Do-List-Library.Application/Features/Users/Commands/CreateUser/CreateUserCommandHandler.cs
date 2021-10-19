@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using MediatR;
 using AutoMapper;
 using To_Do_List_Library.Core.Application.Contracts.Persistence;
-using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Core.Domain.Entities;
 
 namespace To_Do_List_Library.Core.Application.Features.Users.Commands.CreateUser
 {

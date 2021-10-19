@@ -11,7 +11,7 @@ using To_Do_List_Library.Core.Application.Features.ToDoLists.Queries.GetList;
 using To_Do_List_Library.Core.Application.Features.Users.Commands.CreateUser;
 using To_Do_List_Library.Core.Application.Features.Users.Queries.LoginUser;
 using To_Do_List_Library.Core.Application.Models.Authentication;
-using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Core.Domain.Entities;
 
 namespace To_Do_List_Library.Core.Application.Profiles
 {

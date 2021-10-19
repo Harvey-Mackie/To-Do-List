@@ -1,7 +1,7 @@
 ﻿using System;
-using To_Do_List_Library.Core.Common;
+using To_Do_List_Library.Core.Domain.Common;
 
-namespace To_Do_List_Library.Core.Entities
+namespace To_Do_List_Library.Core.Domain.Entities
 {
     public class ToDoItem : AuditableEntry
     {

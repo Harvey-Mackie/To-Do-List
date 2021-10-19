@@ -4,7 +4,7 @@ using To_Do_List_Library.Core.Application.Contracts.Identity;
 using To_Do_List_Library.Core.Application.Contracts.Persistence;
 using To_Do_List_Library.Core.Application.Models.Authentication;
 using AutoMapper;
-using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Core.Domain.Entities;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Microsoft.IdentityModel.Tokens;

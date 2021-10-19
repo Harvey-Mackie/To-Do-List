@@ -7,8 +7,8 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using To_Do_List_Library.Core.Application.Contracts.Presentation;
-using To_Do_List_Library.Core.Common;
-using To_Do_List_Library.Core.Entities;
+using To_Do_List_Library.Core.Domain.Common;
+using To_Do_List_Library.Core.Domain.Entities;
 
 namespace To_Do_List_Library.Infrastructure.Persistence.Configuration
 {
