@@ -10,6 +10,5 @@ namespace To_Do_List_Library.Core.Application.Features.ToDoLists.Commands.Delete
     public class DeleteToDoListCommand : IRequest<bool>
     {
         public Guid ToDoListId { get; set; }
-        public string Token { get; set; }
     }
 }
