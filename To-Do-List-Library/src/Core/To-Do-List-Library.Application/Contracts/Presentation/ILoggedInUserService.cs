@@ -8,6 +8,6 @@ namespace To_Do_List_Library.Core.Application.Contracts.Presentation
 {
     public interface ILoggedInUserService
     {
-        public string UserId { get; }
+        public string UserId { get; set; }
     }
 }
