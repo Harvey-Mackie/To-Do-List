@@ -20,6 +20,12 @@ namespace To_Do_List_Library.Core.Application.Features.Users.Commands.CreateUser
 
         public async Task<Guid> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
+            var validator = new CreateUserCommandValidator(_userRepository);
+            var validatorErrors = await validator.ValidateAsync(request);
+
+            if (validatorErrors.Errors.Count > 0)
+                throw new Exception("User validation failed");
+
             var user = _mapper.Map<User>(request);
             var userAdded = await _userRepository.AddAsync(user);
             return userAdded.UserId;

@@ -16,6 +16,17 @@ namespace To_Do_List_Library.Infrastructure.Persistence.Repositories
         {
             _toDoDbContext = toDoDbContext;
         }
+
+        public bool IsUserEmailUnique(string email)
+        {
+            var user = _toDoDbContext.User.Where(x => x.Email == email).FirstOrDefault();
+            if(user == null)
+            {
+                return true;
+            }
+            return false;
+        }
+
         public User LoginUser(User entity)
         {
             var user = _toDoDbContext.User.Where(x => x.Email == entity.Email && x.Password == entity.Password).FirstOrDefault();
