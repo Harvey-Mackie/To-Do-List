@@ -22,6 +22,7 @@ namespace To_Do_List_Library.Core.Application.Profiles
             CreateMap<CreateUserCommand, User>().ReverseMap();
             CreateMap<AuthenticationRequest, User>().ReverseMap();
             CreateMap<AuthenticationRequest, LoginUserQuery>().ReverseMap();
+            CreateMap<User, LoginUserQuery>().ReverseMap();
 
             CreateMap<CreateToDoItemCommand, ToDoItem>().ReverseMap();
             CreateMap<DeleteToDoItemCommand, ToDoItem>().ReverseMap();

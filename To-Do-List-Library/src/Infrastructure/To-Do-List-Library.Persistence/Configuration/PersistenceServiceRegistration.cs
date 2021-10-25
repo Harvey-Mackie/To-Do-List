@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using To_Do_List_Library.Core.Application.Contracts.Persistence;
+using To_Do_List_Library.Core.Application.Models.Settings;
 using To_Do_List_Library.Infrastructure.Persistence.Repositories;
 
 namespace To_Do_List_Library.Infrastructure.Persistence.Configuration
@@ -18,6 +19,7 @@ namespace To_Do_List_Library.Infrastructure.Persistence.Configuration
             services.AddDbContext<ToDoDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("ToDoListConnectionString")));
 
+            services.Configure<AppSettings>(configuration.GetSection(nameof(AppSettings)));
             services.AddScoped(typeof(IAsyncRepository<>), typeof(BaseRepository<>));
 
             services.AddScoped<IToDoItemRepository, ToDoItemRepository>();

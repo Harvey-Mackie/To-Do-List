@@ -8,6 +8,7 @@ namespace To_Do_List_Library.Core.Application.Contracts.Persistence
     public interface IUserRepository : IAsyncRepository<User> 
     {
         User LoginUser(User entity);
+        User EncryptPassword(User entity);
         bool IsUserEmailUnique(string email);
     }
 }

@@ -27,6 +27,7 @@ namespace To_Do_List_Library.Core.Application.Features.Users.Commands.CreateUser
                 throw new Exception("User validation failed");
 
             var user = _mapper.Map<User>(request);
+            user = _userRepository.EncryptPassword(user);
             var userAdded = await _userRepository.AddAsync(user);
             return userAdded.UserId;
         }
