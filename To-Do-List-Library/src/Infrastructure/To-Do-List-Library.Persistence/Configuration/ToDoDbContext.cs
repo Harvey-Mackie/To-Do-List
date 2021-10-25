@@ -15,6 +15,10 @@ namespace To_Do_List_Library.Infrastructure.Persistence.Configuration
     public class ToDoDbContext : DbContext
     {
         private readonly ILoggedInUserService _loggedInUserService;
+        public ToDoDbContext(DbContextOptions<ToDoDbContext> options)
+           : base(options)
+        {
+        }
         public ToDoDbContext(DbContextOptions<ToDoDbContext> options, ILoggedInUserService loggedInUserService)
           : base(options)
         {

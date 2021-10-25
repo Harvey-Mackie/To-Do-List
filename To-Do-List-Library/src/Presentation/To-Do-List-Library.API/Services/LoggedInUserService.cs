@@ -13,7 +13,7 @@ namespace To_Do_List_Library.Presentation.API.Services
         public string UserId { get; set; }
         public LoggedInUserService(IHttpContextAccessor httpContextAccessor)
         {
-            UserId = httpContextAccessor.HttpContext.Request.Headers[HeaderNames.Authorization];
+            UserId = httpContextAccessor.HttpContext?.Request?.Headers[HeaderNames.Authorization];
         }
     }
 }

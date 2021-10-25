@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\Infrastructure\To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj" />
+    <ProjectReference Include="..\..\src\Infrastructure\To-Do-List-Library.Persistence\To-Do-List-Library.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
